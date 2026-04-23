@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="az" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dev Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+  <!-- Cursor Glow -->
+  <div id="cursor-glow"></div>
+
+  <!-- Mesh Background -->
+  <div class="mesh-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Particles -->
+  <div id="particles"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-4">
+    <div class="max-w-6xl mx-auto rounded-md border border-white/5 bg-slate-950/50 backdrop-blur-md px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+
+      <a href="#" class="flex items-center gap-2">
+        <div class="w-7 h-7 rounded-sm flex items-center justify-center" style="background: linear-gradient(135deg, #d946ef, #7c3aed);">
+          <span class="font-mono text-white font-bold text-xs">MS</span>
+        </div>
+        <span class="hidden sm:inline font-syne font-bold text-white text-sm tracking-widest">SHIKHVERDIYEV<span class="gradient-text">.</span>DEV</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-6 lg:gap-8">
+        <a href="#about" class="nav-link">// haqqımda</a>
+        <a href="#skills" class="nav-link">// bacarıqlar</a>
+        <a href="#projects" class="nav-link">// layihələr</a>
+        <a href="#experience" class="nav-link">// təcrübə</a>
+        <a href="#contact" class="nav-link">// əlaqə</a>
+      </div>
+
+      <!-- CTA + Hamburger -->
+      <div class="flex items-center gap-4">
+        <a href="#contact" class="hidden md:block btn-primary text-sm"><span>Əlaqə Saxla</span></a>
+        <button class="hamburger md:hidden" id="hamburger" aria-label="Mobil menunu ac" aria-controls="mobile-menu" aria-expanded="false" type="button">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden mt-3 rounded-md px-4 py-5">
+      <div class="flex flex-col gap-4">
+        <a href="#about" class="nav-link text-base">// haqqımda</a>
+        <a href="#skills" class="nav-link text-base">// bacarıqlar</a>
+        <a href="#projects" class="nav-link text-base">// layihələr</a>
+        <a href="#experience" class="nav-link text-base">// təcrübə</a>
+        <a href="#contact" class="nav-link text-base">// əlaqə</a>
+        <a href="#contact" class="btn-primary text-center mt-2"><span>Əlaqə Saxla</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="home" class="relative z-10 min-h-screen flex items-center pt-20">
+    <div class="max-w-6xl mx-auto px-6 py-20 w-full">
+      <div class="grid lg:grid-cols-[1.25fr_0.75fr] gap-14 xl:gap-16 items-center">
+
+        <div>
+          <!-- Status Badge -->
+          <div class="inline-flex items-center gap-2 mb-8 px-3 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/5">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span class="font-mono text-emerald-400 text-xs tracking-widest">Açıq İşə</span>
+          </div>
+
+          <!-- Greeting -->
+          <div class="code-line mb-3">
+            <span class="kw">const</span> dev = <span class="str">"Mayl Shikhverdiyev"</span>;
+          </div>
+
+          <h1 class="hero-title whitespace-nowrap text-white mb-2">
+            Full-Stack
+          </h1>
+          <h1 class="hero-title glitch whitespace-nowrap gradient-text mb-3" data-text="Developer">
+            Developer
+          </h1>
+          <p class="section-subtitle whitespace-nowrap text-violet-300 text-white tracking-widest mb-6">
+            & PROJECT MANAGER
+          </p>
+
+          <p class="text-slate-400 text-base leading-relaxed mb-4 max-w-md" style="font-family:'Syne',sans-serif;">
+            C# / .NET MVC, modern frontend texnologiyaları və cloud həlləri ilə mürəkkəb veb tətbiqlər qururam. Kod yazmaq sənətkarlıqdır.
+          </p>
+
+          <div class="code-line mb-8">
+            <span class="kw">skills</span>: [<span class="str">"ASP.NET MVC"</span>, <span class="str">"HTML5 & CSS3"</span>, <span class="str">"React & TypeScript"</span>, <span class="str">"SQL"</span>, <span class="str">"jQuery"</span>]
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="#projects" class="btn-primary"><span>Layihələri Gör</span></a>
+            <a href="#contact" class="btn-outline">CV Yüklə</a>
+          </div>
+
+          <!-- Stats -->
+          <div class="flex gap-10 mt-12 pt-8 border-t border-white/5">
+            <div>
+              <div class="stat-num" data-count="5">0</div>
+              <div class="text-slate-500 text-xs font-mono tracking-wider mt-1">İL TƏCRÜBƏ</div>
+            </div>
+            <div>
+              <div class="stat-num" data-count="15">0</div>
+              <div class="text-slate-500 text-xs font-mono tracking-wider mt-1">LAYİHƏ</div>
+            </div>
+            <div>
+              <div class="stat-num" data-count="30">0</div>
+              <div class="text-slate-500 text-xs font-mono tracking-wider mt-1">MÜŞTƏRİ</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="hidden lg:flex justify-center items-center">
+          <div class="relative">
+            <!-- Avatar Circle -->
+            <div class="relative w-80 h-80">
+              <!-- Rotating Ring -->
+              <div class="absolute inset-0 rounded-full border border-dashed border-violet-500/20 animate-spin" style="animation-duration:20s;"></div>
+              <div class="absolute inset-4 rounded-full border border-dashed border-magenta/10 animate-spin" style="animation-duration:15s; animation-direction:reverse;"></div>
+
+              <!-- Profile Circle -->
+              <div class="absolute inset-8 rounded-full flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #0d0d20, #1a1a3e); border: 1px solid rgba(124,58,237,0.3);">
+                <div class="text-center">
+                  <div class="text-6xl mb-2"><img src="./src/assets/mayl-shikhverdiyev.png" alt="mail şixverdiyev" class="rounded-full "></div>
+                  <div class="font-mono text-xs text-violet-400">v2.0.26</div>
+                </div>
+                <!-- Glow -->
+                <div class="absolute inset-0 rounded-full" style="background: radial-gradient(circle at 50% 30%, rgba(217,70,239,0.15), transparent 60%);"></div>
+              </div>
+
+              <!-- Floating Tags -->
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-violet-300 border-violet-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(0deg) translateY(-184px) rotate(0deg);">HTML5 &amp; CSS3</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-indigo-300 border-indigo-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(40deg) translateY(-184px) rotate(-40deg);">TypeScript</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-cyan-300 border-cyan-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(80deg) translateY(-184px) rotate(-80deg);">JavaScript &amp; jQuery</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-fuchsia-300 border-fuchsia-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(120deg) translateY(-184px) rotate(-120deg);">C# ASP.NET</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-emerald-300 border-emerald-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(160deg) translateY(-184px) rotate(-160deg);">Python</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-blue-300 border-blue-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(200deg) translateY(-184px) rotate(-200deg);">SQL / Database</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-sky-300 border-sky-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(240deg) translateY(-184px) rotate(-240deg);">Server &amp; Cloud</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-blue-300 border-blue-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(280deg) translateY(-184px) rotate(-280deg);">Git &amp; GitHub</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-amber-300 border-amber-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(320deg) translateY(-184px) rotate(-320deg);">C / C++</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="relative z-10 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Code Block Visual -->
+        <div class="reveal">
+          <div class="glass-card p-6 relative">
+            <div class="card-glow"></div>
+            <!-- Terminal Header -->
+            <div class="flex items-center gap-2 mb-5 pb-4 border-b border-white/5">
+              <div class="w-3 h-3 rounded-full bg-red-500/70"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500/70"></div>
+              <div class="w-3 h-3 rounded-full bg-emerald-500/70"></div>
+              <span class="font-mono text-xs text-slate-500 ml-2">developer.cs</span>
+            </div>
+            <!-- Fake Code -->
+            <div class="space-y-1.5 font-mono text-xs leading-relaxed">
+              <div><span class="text-violet-400">public class</span> <span class="text-fuchsia-400">Developer</span></div>
+              <div class="pl-4"><span class="text-slate-500">{</span></div>
+              <div class="pl-8"><span class="text-blue-400">public string</span> <span class="text-white">Name</span> <span class="text-slate-500">= </span><span class="text-emerald-400">"Mayl Shikhverdiyev"</span>;</div>
+              <div class="pl-8"><span class="text-blue-400">public string</span> <span class="text-white">Role</span> <span class="text-slate-500">= </span><span class="text-emerald-400">"Full-Stack Dev"</span>;</div>
+              <div class="pl-8"><span class="text-blue-400">public string</span> <span class="text-white">Location</span> <span class="text-slate-500">= </span><span class="text-emerald-400">"Bakı, AZ"</span>;</div>
+              <div class="pl-8 mt-2"><span class="text-blue-400">public string[]</span> <span class="text-white">Focus</span> <span class="text-slate-500">=</span></div>
+              <div class="pl-12"><span class="text-slate-500">{</span></div>
+              <div class="pl-16"><span class="text-emerald-400">"ASP.NET MVC"</span><span class="text-slate-500">,</span></div>
+              <div class="pl-16"><span class="text-emerald-400">"Microservices"</span><span class="text-slate-500">,</span></div>
+              <div class="pl-16"><span class="text-emerald-400">"Responsive Website"</span></div>
+              <div class="pl-16"><span class="text-emerald-400">"REST Api"</span></div>
+              <div class="pl-16"><span class="text-emerald-400">"Project management"</span></div>
+              <div class="pl-16"><span class="text-emerald-400">"Networking"</span></div>
+              <div class="pl-16"><span class="text-emerald-400">"Domain & Hosting"</span></div>
+              <div class="pl-16"><span class="text-emerald-400">"Team Leading"</span></div>
+              <div class="pl-12"><span class="text-slate-500">};</span></div>
+              <div class="pl-4 mt-2"><span class="text-slate-500">}</span></div>
+            </div>
+          </div>
+
+          <!-- Mini Stats Row -->
+          <div class="grid grid-cols-3 gap-4 mt-4">
+            <div class="glass-card p-4 text-center">
+              <div class="card-glow"></div>
+              <i class="fa-brands fa-github text-2xl text-slate-400 mb-2"></i>
+              <div class="font-mono text-xs text-slate-500">GitHub</div>
+              <div class="font-mono text-sm text-white mt-0.5">20+ projects</div>
+            </div>
+            <div class="glass-card p-4 text-center">
+              <div class="card-glow"></div>
+              <i class="fa-solid fa-star text-2xl text-yellow-500/70 mb-2"></i>
+              <div class="font-mono text-xs text-slate-500">Stars</div>
+              <div class="font-mono text-sm text-white mt-0.5">180+</div>
+            </div>
+            <div class="glass-card p-4 text-center">
+              <div class="card-glow"></div>
+              <i class="fa-solid fa-mug-hot text-2xl text-amber-500/70 mb-2"></i>
+              <div class="font-mono text-xs text-slate-500">Qəhvə</div>
+              <div class="font-mono text-sm text-white mt-0.5">∞ fincan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="section-label mb-3">// 01. haqqımda</div>
+          <h2 class="section-title text-white mb-6">
+            Texnologiya ilə <span class="gradient-text">dəyər</span> yaradıram
+          </h2>
+          <p class="text-slate-400 leading-relaxed mb-4">
+            5+ il ərzində enterprise səviyyəli veb tətbiqlər, REST API-lər və microservice arxitekturaları qurmuşam. C# / ASP.NET MVC ekosistemini dərin bilirəm.
+          </p>
+          <p class="text-slate-400 leading-relaxed mb-8">
+            Frontend tərəfdə React, TypeScript və vanilla JavaScript istifadə edirəm. Clean code prinsiplerinə, SOLID qaydalarına və DDD yanaşmasına əməl edirəm. Hər layihəni performans, təhlükəsizlik və miqyaslanma nəzərə alınaraq qururum.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="skill-tag"><i class="fa-solid fa-map-marker-alt text-fuchsia-400"></i> Bakı, Azərbaycan</span>
+            <span class="skill-tag"><i class="fa-solid fa-language text-blue-400"></i> AZ / RU / EN / TR</span>
+            <span class="skill-tag"><i class="fa-solid fa-graduation-cap text-violet-400"></i> BMU — IT</span>
+            <span class="skill-tag"><i class="fa-solid fa-briefcase text-emerald-400"></i> Freelance & Part-time</span>
+          </div>
+
+          <a href="#" class="btn-outline inline-flex items-center gap-2">
+            <i class="fa-solid fa-download text-xs"></i> CV Yüklə
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills" class="relative z-10 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16 reveal">
+        <div class="section-label mb-3">// 02. bacarıqlar</div>
+        <h2 class="section-title text-white">Tech <span class="gradient-text">Stack</span></h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-12">
+
+        <!-- Backend -->
+        <div class="glass-card p-6 reveal">
+          <div class="card-glow"></div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded flex items-center justify-center" style="background: linear-gradient(135deg, rgba(217,70,239,0.2), rgba(124,58,237,0.2)); border: 1px solid rgba(217,70,239,0.3);">
+              <i class="fa-solid fa-server text-fuchsia-400"></i>
+            </div>
+            <div>
+              <div class="font-bold text-white">Backend</div>
+              <div class="font-mono text-xs text-slate-500">Server-side</div>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-1.5">
+                <span class="font-mono text-xs text-slate-300">C# / ASP.NET MVC</span>
+                <span class="font-mono text-xs text-fuchsia-400">75%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1.5">
+                <span class="font-mono text-xs text-slate-300">Entity Framework Core</span>
+                <span class="font-mono text-xs text-fuchsia-400">90%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1.5">
+                <span class="font-mono text-xs text-slate-300">Web API / REST</span>
+                <span class="font-mono text-xs text-fuchsia-400">92%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1.5">
+                <span class="font-mono text-xs text-slate-300">SignalR / gRPC</span>
+                <span class="font-mono text-xs text-fuchsia-400">75%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="glass-card p-6 reveal">
+          <div class="card-glow"></div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded flex items-center justify-center" style="background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(124,58,237,0.2)); border: 1px solid rgba(59,130,246,0.3);">
+              <i class="fa-solid fa-palette text-blue-400"></i>
+            </div>
+            <div>
+              <div class="font-bold text-white">Frontend</div>
+              <div class="font-mono text-xs text-slate-500">Client-side</div>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-1.5">
+                <span class="font-mono text-xs text-slate-300">HTML / CSS / JS</span>
+                <span class="font-mono text-xs text-blue-400">95%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1.5">
+                <span class="font-mono text-xs text-slate-300">React / TypeScript</span>
+                <span class="font-mono text-xs text-blue-400">82%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1.5">
+                <span class="font-mono text-xs text-slate-300">Tailwind CSS</span>
+                <span class="font-mono text-xs text-blue-400">90%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1.5">
+                <span class="font-mono text-xs text-slate-300">jQuery / Bootstrap</span>
+                <span class="font-mono text-xs text-blue-400">88%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="glass-card p-6 reveal">
+          <div class="card-glow"></div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded flex items-center justify-center" style="background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(59,130,246,0.2)); border: 1px solid rgba(124,58,237,0.3);">
+              <i class="fa-solid fa-database text-violet-400"></i>
+            </div>
+            <div>
+              <div class="font-bold text-white">Database & Cloud</div>
+              <div class="font-mono text-xs text-slate-500">Data Layer</div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag">SQL Server</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">NextCloud</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">CI/CD</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="glass-card p-6 reveal">
+          <div class="card-glow"></div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded flex items-center justify-center" style="background: linear-gradient(135deg, rgba(217,70,239,0.15), rgba(59,130,246,0.15)); border: 1px solid rgba(217,70,239,0.3);">
+              <i class="fa-solid fa-wrench text-fuchsia-400"></i>
+            </div>
+            <div>
+              <div class="font-bold text-white">Tools & Methods</div>
+              <div class="font-mono text-xs text-slate-500">Workflow</div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag">Visual Studio</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Artificial Intelligence (AI)</span>
+            <span class="skill-tag">SOLID</span>
+            <span class="skill-tag">Clean Arch</span>
+            <span class="skill-tag">Agile / Scrum / Waterfall</span>
+            <span class="skill-tag">Ubuntu Server</span>
+            <span class="skill-tag">Unit Testing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects" class="relative z-10 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16 reveal">
+        <div class="section-label mb-3">// 03. layihələr</div>
+        <h2 class="section-title text-white">Seçilmiş <span class="gradient-text">İşlər</span></h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Project 1 -->
+        <div class="glass-card reveal">
+          <div class="card-glow"></div>
+          <div class="project-img">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center">
+                <i class="fa-solid fa-building text-5xl mb-3" style="background: linear-gradient(135deg, #d946ef, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                <div class="font-mono text-xs text-slate-600">Corporate</div>
+              </div>
+            </div>
+            <div class="project-img-overlay rounded-t">
+              <div class="flex gap-3">
+                <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-colors">
+                  <i class="fa-brands fa-github text-white text-sm"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-colors">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-white text-sm"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-white text-lg mb-2">Electroom.AZ</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">ASP.NET MVC, EF Core, SQL Server üzərində qurulmuş tam funksiyalı korporaiv xidmət platfoması  . Ödəniş inteqrasiyası, admin panel.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="skill-tag text-xs py-1 px-2">C# ASP.NET MVC</span>
+              <span class="skill-tag text-xs py-1 px-2">SQL Server</span>
+              <span class="skill-tag text-xs py-1 px-2">E-Point</span>
+              <span class="skill-tag text-xs py-1 px-2">jQuery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <!-- EDIT THIS PROJECT --> 
+        <div class="glass-card reveal">
+          <div class="card-glow"></div>
+          <div class="project-img">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center">
+                <i class="fa-solid fa-building text-5xl mb-3" style="background: linear-gradient(135deg, #7c3aed, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                <div class="font-mono text-xs text-slate-600">Corporate</div>
+              </div>
+            </div>
+            <div class="project-img-overlay rounded-t">
+              <div class="flex gap-3">
+                <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-colors">
+                  <i class="fa-brands fa-github text-white text-sm"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-colors">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-white text-sm"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-white text-lg mb-2">INSHAAT</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">Inşaat şirkəti üçün simple-one-page korporativ səhifə. </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="skill-tag text-xs py-1 px-2">HTML5 / CSS3</span>
+              <span class="skill-tag text-xs py-1 px-2">Responsive Design</span>
+              <span class="skill-tag text-xs py-1 px-2">Tailwind CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="glass-card reveal">
+          <div class="card-glow"></div>
+          <div class="project-img">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center">
+                <i class="fa-solid fa-sitemap text-5xl mb-3" style="background: linear-gradient(135deg, #d946ef, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                <div class="font-mono text-xs text-slate-600">CRM & HRM and more ...</div>
+              </div>
+            </div>
+            <div class="project-img-overlay rounded-t">
+              <div class="flex gap-3">
+                <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-colors">
+                  <i class="fa-brands fa-github text-white text-sm"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-colors">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-white text-sm"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-white text-lg mb-2">Ferora Management</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">Müştəri, təchizat, işçi, satış, və s. şirkətin idarəetmə sistemləri. Bütün şirkət proseslərinin vahid platfoma üzərindən idarə edilməsi.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="skill-tag text-xs py-1 px-2">Laravel MVC</span>
+              <span class="skill-tag text-xs py-1 px-2">PDF & Excel Reports</span>
+              <span class="skill-tag text-xs py-1 px-2">Cloud</span>
+              <span class="skill-tag text-xs py-1 px-2">Management Dashboards</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="glass-card reveal">
+          <div class="card-glow"></div>
+          <div class="project-img">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center">
+                <i class="fa-solid fa-cart-shopping text-5xl mb-3" style="background: linear-gradient(135deg, #7c3aed, #d946ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                <div class="font-mono text-xs text-slate-600">E-Commerce</div>
+              </div>
+            </div>
+            <div class="project-img-overlay rounded-t">
+              <div class="flex gap-3">
+                <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-colors">
+                  <i class="fa-brands fa-github text-white text-sm"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-white text-lg mb-2">Zetra.Az</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">IT və Elektronika məhsullarının elektron satış platfoması. Ödəniş sistemləri inteqrasiyası .</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="skill-tag text-xs py-1 px-2">HTML5 / CSS3</span>
+              <span class="skill-tag text-xs py-1 px-2">C# ASP.NET MVC</span>
+              <span class="skill-tag text-xs py-1 px-2">MS SQL</span>
+              <span class="skill-tag text-xs py-1 px-2">E-Point Integration</span>
+              <span class="skill-tag text-xs py-1 px-2">Google Pay</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="glass-card reveal">
+          <div class="card-glow"></div>
+          <div class="project-img">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center">
+                <i class="fa-solid fa-graduation-cap text-5xl mb-3" style="background: linear-gradient(135deg, #3b82f6, #d946ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                <div class="font-mono text-xs text-slate-600">EdTech</div>
+              </div>
+            </div>
+            <div class="project-img-overlay rounded-t">
+              <div class="flex gap-3">
+                <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-colors">
+                  <i class="fa-brands fa-github text-white text-sm"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-colors">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-white text-sm"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-white text-lg mb-2">CoThink.Az</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-4">Onlayn öyrənmə sistemi. Video dərslər, Müzakirə , Paylaşımlar , Oxu materialları, sertifikat generasiyası, ödəniş inteqrasiyası.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="skill-tag text-xs py-1 px-2">React Js</span>
+              <span class="skill-tag text-xs py-1 px-2">Tailwind CSS</span>
+              <span class="skill-tag text-xs py-1 px-2">Azure Cloud</span>
+              <span class="skill-tag text-xs py-1 px-2">PHP Laravel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 - CTA -->
+        <div class="glass-card reveal flex flex-col items-center justify-center p-10 text-center" style="border-style: dashed; border-color: rgba(124,58,237,0.2);">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center mb-4" style="background: linear-gradient(135deg, rgba(217,70,239,0.1), rgba(124,58,237,0.1)); border: 1px solid rgba(217,70,239,0.2);">
+            <i class="fa-brands fa-github text-2xl text-slate-400"></i>
+          </div>
+          <p class="text-slate-500 text-sm font-mono mb-4">Daha çox layihəni GitHub-da gör</p>
+          <a href="https://github.com/shikhverdiyev05/" class="btn-outline text-sm">GitHub Profil</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section id="experience" class="relative z-10 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16 reveal">
+        <div class="section-label mb-3">// 04. təcrübə</div>
+        <h2 class="section-title text-white">Karyera <span class="gradient-text">Yolu</span></h2>
+      </div>
+
+      <div class="relative pl-8 max-w-3xl mx-auto">
+        <div class="timeline-line"></div>
+
+        <!-- Entry 1 -->
+        <div class="relative mb-10 reveal">
+          <div class="absolute -left-10 top-1 flex items-center justify-center">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="glass-card p-6">
+            <div class="card-glow"></div>
+            <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+              <div>
+                <h3 class="font-bold text-white text-base">Junior Front-End Developer</h3>
+                <div class="font-mono text-xs text-fuchsia-400 mt-0.5">Ferora LLC</div>
+              </div>
+              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2026 — İndi</span>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut rerum, minus voluptates eum tempora eius autem neque magnam. Beatae est iusto sit accusamus voluptates sed iste doloribus ut repellat aspernatur!</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="skill-tag text-xs py-1">React JS</span>
+              <span class="skill-tag text-xs py-1">TypeScript</span>
+              <span class="skill-tag text-xs py-1">TailwindCSS</span>
+              <span class="skill-tag text-xs py-1">REST API</span>
+              <span class="skill-tag text-xs py-1">PaaS</span>
+              <span class="skill-tag text-xs py-1">Cloud</span>           
+            </div>
+          </div>
+        </div>
+
+        <!-- Entry 2 -->
+        <div class="relative mb-10 reveal">
+          <div class="absolute -left-10 top-1 flex items-center justify-center">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="glass-card p-6">
+            <div class="card-glow"></div>
+            <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+              <div>
+                <h3 class="font-bold text-white text-base">Junior Full-Stack Developer</h3>
+                <div class="font-mono text-xs text-fuchsia-400 mt-0.5">Electroom.Az</div>
+              </div>
+              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2026 — İndi</span>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut rerum, minus voluptates eum tempora eius autem neque magnam. Beatae est iusto sit accusamus voluptates sed iste doloribus ut repellat aspernatur!</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="skill-tag text-xs py-1">React JS</span>
+              <span class="skill-tag text-xs py-1">TypeScript</span>
+              <span class="skill-tag text-xs py-1">TailwindCSS</span>
+              <span class="skill-tag text-xs py-1">REST API</span>
+              <span class="skill-tag text-xs py-1">PaaS</span>
+              <span class="skill-tag text-xs py-1">Cloud</span>           
+            </div>
+          </div>
+        </div>
+
+        <!-- Entry 3 -->
+        <div class="relative mb-10 reveal">
+          <div class="absolute -left-10 top-1">
+            <div class="timeline-dot" style="opacity:0.7;"></div>
+          </div>
+          <div class="glass-card p-6">
+            <div class="card-glow"></div>
+            <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+              <div>
+                <h3 class="font-bold text-white text-base">CO - Owner</h3>
+                <div class="font-mono text-xs text-blue-400 mt-0.5">DevAzDesign Group — Bakı</div>
+              </div>
+              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2020 — 2023</span>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">Dizayn, proqram təminatı, İT help-desk və sistem inzibatçılığı kimi fərqli istiqamətləri birləşdirən multidissiplinar rəqəmsal həllər agentliyi kimi yaradılmışdır. Biz kiçik və orta miqyaslı müəssisələrin rəqəmsallaşma ehtiyaclarını vahid mərkəzdən qarşılamaq üçün dizayn mərkəzli və infrastruktur yönümlü layihələr icra edirdik. Şirkətin qurucu ortağı kimi, rəqəmsal məhsulların ideyadan icraya qədər olan bütün həyat dövrünü (SDLC) idarə etmiş və biznes hədəflərinə uyğun strateji inkişaf planları hazırlamışam.</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="skill-tag text-xs py-1">Jira</span>
+              <span class="skill-tag text-xs py-1">Figma</span>
+              <span class="skill-tag text-xs py-1">Microsoft Teams</span>
+              <span class="skill-tag text-xs py-1">Freshdesk</span>
+              <span class="skill-tag text-xs py-1">AnyDesk</span>
+              <span class="skill-tag text-xs py-1">Google Workspace</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entry 4 -->
+        <div class="relative mb-10 reveal">
+          <div class="absolute -left-10 top-1">
+            <div class="timeline-dot" style="opacity:0.5;"></div>
+          </div>
+          <div class="glass-card p-6">
+            <div class="card-glow"></div>
+            <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+              <div>
+                <h3 class="font-bold text-white text-base">Junior UX/UI Designer</h3>
+                <div class="font-mono text-xs text-violet-400 mt-0.5">Cal.com - Italy</div>
+              </div>
+              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2021 — 2022</span>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">Mən 2031-ci ilə qədər bir milyard insanı birləşdirməyi hədəfləyən, qlobal "Open Scheduling" infrastrukturunu quran açıq qaynaqlı (open-source) layihədə remote olaraq platformanın həm infrastruktur baxımından güclü, həm də vizual olaraq minimalist və estetik qalmasını təmin edən genişləndirilə bilən dizayn sistemləri və istifadəçi axınları üzərində işləmişəm.</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="skill-tag text-xs py-1">Figma</span>
+              <span class="skill-tag text-xs py-1">Adobe Illustrator</span>
+              <span class="skill-tag text-xs py-1">Adobe Photoshop</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enrty 5 -->
+        <div class="relative mb-10 reveal">
+          <div class="absolute -left-10 top-1">
+            <div class="timeline-dot" style="opacity:0.5;"></div>
+          </div>
+          <div class="glass-card p-6">
+            <div class="card-glow"></div>
+            <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+              <div>
+                <h3 class="font-bold text-white text-base">Help Desk</h3>
+                <div class="font-mono text-xs text-violet-400 mt-0.5">Int Mobile - IT Services</div>
+              </div>
+              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2020 — 2025</span>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">Help-desk mütəxəssisi olaraq, müəssisə daxili İT infrastrukturun qurulması və periferiya qurğularının sazlanması ilə yanaşı, lokal şəbəkə xətalarının aradan qaldırılması və təhlükəsizlik kamera sistemlərinin montajı proseslərini uğurla icra etmişəm. Gələn texniki müraciətləri mərkəzləşdirilmiş qaydada qəbul edərək, proqram təminatlarının konfiqurasiyası və sistem nasazlıqlarının operativ həlli vasitəsilə texniki dəstək xidmətinin kəsintisizliyini təmin etmişəm. Həm rəqəmsal, həm də fiziki texniki infrastrukturun idarə olunmasında birbaşa iştirak edərək, mürəkkəb hardware və software problemlərini peşəkar səviyyədə həll etmişəm.</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="skill-tag text-xs py-1">Windows / Windows Server</span>
+              <span class="skill-tag text-xs py-1">Linux / Linux Server</span>
+              <span class="skill-tag text-xs py-1">Hikvision, Dahua</span>
+              <span class="skill-tag text-xs py-1">MikroTik, Cisco, TP-Link , HikCenter</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Course-->
+        <div class="relative mb-10 reveal">
+          <div class="absolute -left-10 top-1">
+            <div class="timeline-dot" style="opacity:0.4; background: linear-gradient(135deg, #3b82f6, #7c3aed);"></div>
+          </div>
+          <div class="glass-card p-6">
+            <div class="card-glow"></div>
+            <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+              <div>
+                <h3 class="font-bold text-white text-base">Course - Front-End Developer</h3>
+                <div class="font-mono text-xs text-blue-400 mt-0.5">Div Academy</div>
+              </div>
+              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2025 — 2026</span>
+            </div>
+            <p class="text-slate-400 text-sm">Müasir dövrün tələblərinə cavab verən responsiv , profesional saytların yığılması , əsas dizayn prinsipləri , müxtəlif veb animasiyaların hazırlanması , müasir framework-lar və kitabxanalarla işləmə bacarıqları , API -lar ilə praktiki iş təcrübəsi , SaaS və PaaS sistemlərinin hazırlanması ,mürəkkəb və funsional Admin panellərin qurulması</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="skill-tag text-xs py-1">HTML5 / CSS3</span>
+              <span class="skill-tag text-xs py-1">SASS / SCSS</span>
+              <span class="skill-tag text-xs py-1">Tailwind CSS / BootStrap</span>
+              <span class="skill-tag text-xs py-1">JavaScript / jQuery</span>
+              <span class="skill-tag text-xs py-1">React Js</span>
+              <span class="skill-tag text-xs py-1">REST API</span> 
+              <span class="skill-tag text-xs py-1">Domain / Hosting</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Education Course-->
+        <div class="relative mb-10 reveal">
+          <div class="absolute -left-10 top-1">
+            <div class="timeline-dot" style="opacity:0.4; background: linear-gradient(135deg, #3b82f6, #7c3aed);"></div>
+          </div>
+          <div class="glass-card p-6">
+            <div class="card-glow"></div>
+            <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+              <div>
+                <h3 class="font-bold text-white text-base">Course - Project Manager</h3>
+                <div class="font-mono text-xs text-blue-400 mt-0.5">Secret Academy</div>
+              </div>
+              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2025</span>
+            </div>
+            <p class="text-slate-400 text-sm">Layihələrin idarə edilməsi üzrə praktiki işlər, risk ,vaxt və büdcənin idarə edilməsi üsulları , tələblərin toplaması və komandaya ötürülməsi qaydaları  </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="skill-tag text-xs py-1">Trello / Jira</span>
+              <span class="skill-tag text-xs py-1">Agile / Scrum / Waterfall</span>
+              <span class="skill-tag text-xs py-1">MS Project</span>
+              <span class="skill-tag text-xs py-1">Time / Cost management</span>
+              <span class="skill-tag text-xs py-1">Risk analysis / Risk management</span>
+              <span class="skill-tag text-xs py-1">Stackeholder analysis</span> 
+            </div>
+          </div>
+        </div>
+
+        <!-- Education University-->
+        <div class="relative reveal">
+          <div class="absolute -left-10 top-1">
+            <div class="timeline-dot" style="opacity:0.4; background: linear-gradient(135deg, #3b82f6, #7c3aed);"></div>
+          </div>
+          <div class="glass-card p-6">
+            <div class="card-glow"></div>
+            <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
+              <div>
+                <h3 class="font-bold text-white text-base">Bakalavr — İnformasiya Texnologiyaları</h3>
+                <div class="font-mono text-xs text-blue-400 mt-0.5">Bakı Mühəndislik Universiteti</div>
+              </div>
+              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2023 — indi</span>
+            </div>
+            <p class="text-slate-400 text-sm">Mürəkkəb Alqoritmlər, Data Strukturlar, OOP, Database Management ,UX/UI Design , 3D Modelləşdirmə , Business Intelligence </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="skill-tag text-xs py-1">HTML / CSS / JS</span>
+              <span class="skill-tag text-xs py-1">React JS</span>
+              <span class="skill-tag text-xs py-1">C / C++ / OOP </span>
+              <span class="skill-tag text-xs py-1">Algorithms / Data Structures</span>
+              <span class="skill-tag text-xs py-1">Java OOP</span>
+              <span class="skill-tag text-xs py-1">C# .NET / ASP.NET MVC / Entity FE</span>
+              <span class="skill-tag text-xs py-1">Oracle SQL / MS SQL</span>
+              <span class="skill-tag text-xs py-1">Microservices / Web API</span>
+              <span class="skill-tag text-xs py-1">AutoCAD 2D / 3D design</span>
+              <span class="skill-tag text-xs py-1">Figma UX/UI , Canva</span>
+              <span class="skill-tag text-xs py-1">Computer Modelling</span>
+              <span class="skill-tag text-xs py-1">Advanced Circuit Simulation</span>
+              <span class="skill-tag text-xs py-1">Network Devices</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="relative z-10 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16 reveal">
+        <div class="section-label mb-3">// 05. əlaqə</div>
+        <h2 class="section-title text-white">Birlikdə <span class="gradient-text">İşləyək</span></h2>
+        <p class="text-slate-400 mt-4 max-w-lg mx-auto text-sm">Layihəniz, sualınız və ya iş təklifiniz varsa — mənimlə əlaqə saxlayın. Ən qısa zamanda cavab verirəm.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10">
+
+        <!-- Contact Info -->
+        <div class="space-y-4 reveal">
+          <div class="glass-card p-5 flex items-center gap-4">
+            <div class="card-glow"></div>
+            <div class="w-12 h-12 rounded flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, rgba(217,70,239,0.15), rgba(124,58,237,0.15)); border: 1px solid rgba(217,70,239,0.2);">
+              <i class="fa-solid fa-envelope text-fuchsia-400"></i>
+            </div>
+            <div>
+              <div class="font-mono text-xs text-slate-500 mb-0.5">E-mail</div>
+              <a href="mailto:anar@dev.az" class="text-white hover:text-fuchsia-400 transition-colors font-medium">maylshikhverdiyev@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="glass-card p-5 flex items-center gap-4">
+            <div class="card-glow"></div>
+            <div class="w-12 h-12 rounded flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(59,130,246,0.15)); border: 1px solid rgba(124,58,237,0.2);">
+              <i class="fa-brands fa-linkedin text-violet-400"></i>
+            </div>
+            <div>
+              <div class="font-mono text-xs text-slate-500 mb-0.5">LinkedIn</div>
+              <a href="www.linkedin.com/in/maylshikhverdiyev" class="text-white hover:text-violet-400 transition-colors font-medium">linkedin.com/in/maylshikhverdiyev</a>
+            </div>
+          </div>
+
+          <div class="glass-card p-5 flex items-center gap-4">
+            <div class="card-glow"></div>
+            <div class="w-12 h-12 rounded flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(217,70,239,0.15)); border: 1px solid rgba(59,130,246,0.2);">
+              <i class="fa-brands fa-github text-blue-400"></i>
+            </div>
+            <div>
+              <div class="font-mono text-xs text-slate-500 mb-0.5">GitHub</div>
+              <a href="http://github.com/shikhverdiyev05" class="text-white hover:text-blue-400 transition-colors font-medium">github.com/shikhverdiyev05</a>
+            </div>
+          </div>
+
+          <div class="glass-card p-5 flex items-center gap-4">
+            <div class="card-glow"></div>
+            <div class="w-12 h-12 rounded flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, rgba(217,70,239,0.1), rgba(124,58,237,0.1)); border: 1px solid rgba(217,70,239,0.15);">
+              <i class="fa-brands fa-telegram text-sky-400"></i>
+            </div>
+            <div>
+              <div class="font-mono text-xs text-slate-500 mb-0.5">Telegram</div>
+              <a href="#" class="text-white hover:text-sky-400 transition-colors font-medium">@LezginMS</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="glass-card p-8 reveal">
+          <div class="card-glow"></div>
+          <h3 class="font-bold text-white text-xl mb-6">Mesaj Göndər</h3>
+          <div id="contact-form" class="space-y-4">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="font-mono text-xs text-slate-500 block mb-2 tracking-wider">AD</label>
+                <input type="text" placeholder="Adınız" class="form-input"/>
+              </div>
+              <div>
+                <label class="font-mono text-xs text-slate-500 block mb-2 tracking-wider">SOYAD</label>
+                <input type="text" placeholder="Soyadınız" class="form-input"/>
+              </div>
+            </div>
+            <div>
+              <label class="font-mono text-xs text-slate-500 block mb-2 tracking-wider">E-MAIL</label>
+              <input type="email" placeholder="email@example.com" class="form-input"/>
+            </div>
+            <div>
+              <label class="font-mono text-xs text-slate-500 block mb-2 tracking-wider">MÖVZU</label>
+              <select class="form-input">
+                <option value="">Seçin...</option>
+                <option>Layihə Sifarişi</option>
+                <option>İş Təklifi</option>
+                <option>Əməkdaşlıq</option>
+                <option>Digər</option>
+              </select>
+            </div>
+            <div>
+              <label class="font-mono text-xs text-slate-500 block mb-2 tracking-wider">MESAJ</label>
+              <textarea rows="4" placeholder="Mesajınızı yazın..." class="form-input resize-none"></textarea>
+            </div>
+            <button id="send-btn" class="btn-primary w-full text-center">
+              <span class="flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane text-xs"></i>
+                Göndər
+              </span>
+            </button>
+            <div id="form-success" class="hidden font-mono text-xs text-emerald-400 text-center py-2">
+              ✓ Mesajınız uğurla göndərildi!
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="relative z-10 py-10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="footer-line mb-8"></div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <span class="font-syne font-bold text-white text-sm tracking-wider">SHIKHVERDIYEV<span class="gradient-text">.</span>DEV</span>
+          <span class="font-mono text-xs text-slate-600">© 2026</span>
+        </div>
+        <div class="font-mono text-xs text-slate-600 text-center">
+          Quruldu: <span class="text-violet-400">ASP.NET MVC</span> + <span class="text-fuchsia-400">Tailwind</span> + <span class="text-blue-400">♥</span>
+        </div>
+        <div class="flex gap-4">
+          <a href="https://github.com/shikhverdiyev05" target="_blank" class="text-slate-500 hover:text-fuchsia-400 transition-colors"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/maylshikhverdiyev" target="_blank" class="text-slate-500 hover:text-blue-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" class="text-slate-500 hover:text-sky-400 transition-colors"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#" class="text-slate-500 hover:text-fuchsia-400 transition-colors"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./js/tailwind.config.js"></script>
+  <script src="./js/main.js"></script>
+  
+</body>
+</html>
