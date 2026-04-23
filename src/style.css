@@ -1,11 +1,12 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Lexend+Deca:wght@500;600;700;800&family=Lexend+Exa:wght@500;600;700&family=Lexend+Zetta:wght@500;600;700&display=swap&subset=latin-ext');
 
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
   background-color: #050510;
   color: #e2e0f0;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
 
@@ -69,7 +70,7 @@ body::before {
 }
 .nav-link {
   position: relative;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
   color: #a89ecf;
   transition: color 0.3s;
@@ -91,7 +92,8 @@ body::before {
   font-size: clamp(2.4rem, 6.2vw, 5.2rem);
   font-weight: 800;
   line-height: 1.05;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.1em;
+  font-family: 'Lexend Deca', 'Lexend Exa', 'Lexend Zetta', sans-serif;
 }
 .gradient-text {
   background: linear-gradient(135deg, #d946ef 0%, #7c3aed 50%, #3b82f6 100%);
@@ -147,7 +149,7 @@ body::before {
 .btn-primary {
   background: linear-gradient(135deg, #d946ef, #7c3aed);
   color: #fff;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   padding: 0.85rem 2rem;
@@ -172,7 +174,7 @@ body::before {
 .btn-outline {
   border: 1px solid rgba(124,58,237,0.5);
   color: #a89ecf;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   padding: 0.85rem 2rem;
@@ -222,7 +224,7 @@ body::before {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.7rem;
   padding: 0.4rem 0.85rem;
   border-radius: 2px;
@@ -241,7 +243,7 @@ body::before {
 
 /* --- Section Title --- */
 .section-label {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Lexend Deca', 'Lexend Exa', 'Lexend Zetta', sans-serif;
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   color: #d946ef;
@@ -250,13 +252,15 @@ body::before {
 .section-title {
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.2em;
+  font-family: 'Lexend Deca', 'Lexend Exa', 'Lexend Zetta', sans-serif;
 }
 
 .section-subtitle{
-  font-size: clamp(1rem, 2vw, 2rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-family: 'Lexend Exa', 'Lexend Deca', 'Lexend Zetta', sans-serif;
 }
 
 /* --- Progress Bar --- */
@@ -316,7 +320,7 @@ body::before {
   border-radius: 2px;
   padding: 0.85rem 1rem;
   color: #e2e0f0;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
   outline: none;
   transition: border-color 0.3s, box-shadow 0.3s;
@@ -419,7 +423,7 @@ body::before {
 
 /* Code decoration */
 .code-line {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.72rem;
   color: rgba(124,58,237,0.4);
   letter-spacing: 0.02em;

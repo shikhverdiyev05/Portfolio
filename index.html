@@ -4,10 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dev Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Lexend+Deca:wght@500;600;700;800&family=Lexend+Exa:wght@500;600;700&family=Lexend+Zetta:wght@500;600;700&display=swap&subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="./src/style.css">
   <link rel="stylesheet" href="./src/output.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+  <script src="./js/tailwind.config.js"></script>
+  <script src="./js/main.js"></script>
 </head>
 
 <body>
@@ -30,7 +34,7 @@
 
       <a href="#" class="flex items-center gap-2">
         <div class="w-7 h-7 rounded-sm flex items-center justify-center" style="background: linear-gradient(135deg, #d946ef, #7c3aed);">
-          <span class="font-mono text-white font-bold text-xs">MS</span>
+          <span class="font-syne text-white font-bold text-xs">MS</span>
         </div>
         <span class="hidden sm:inline font-syne font-bold text-white text-sm tracking-widest">SHIKHVERDIYEV<span class="gradient-text">.</span>DEV</span>
       </a>
@@ -75,7 +79,7 @@
           <!-- Status Badge -->
           <div class="inline-flex items-center gap-2 mb-8 px-3 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/5">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span class="font-mono text-emerald-400 text-xs tracking-widest">Açıq İşə</span>
+            <span class="font-syne text-emerald-400 text-xs tracking-widest">Açıq İşə</span>
           </div>
 
           <!-- Greeting -->
@@ -93,7 +97,7 @@
             & PROJECT MANAGER
           </p>
 
-          <p class="text-slate-400 text-base leading-relaxed mb-4 max-w-md" style="font-family:'Syne',sans-serif;">
+          <p class="text-slate-400 text-base leading-relaxed mb-4 max-w-md" style="font-family:'Montserrat',sans-serif;">
             C# / .NET MVC, modern frontend texnologiyaları və cloud həlləri ilə mürəkkəb veb tətbiqlər qururam. Kod yazmaq sənətkarlıqdır.
           </p>
 
@@ -110,15 +114,15 @@
           <div class="flex gap-10 mt-12 pt-8 border-t border-white/5">
             <div>
               <div class="stat-num" data-count="5">0</div>
-              <div class="text-slate-500 text-xs font-mono tracking-wider mt-1">İL TƏCRÜBƏ</div>
+              <div class="text-slate-500 text-xs font-syne tracking-wider mt-1">İL TƏCRÜBƏ</div>
             </div>
             <div>
               <div class="stat-num" data-count="15">0</div>
-              <div class="text-slate-500 text-xs font-mono tracking-wider mt-1">LAYİHƏ</div>
+              <div class="text-slate-500 text-xs font-syne tracking-wider mt-1">LAYİHƏ</div>
             </div>
             <div>
               <div class="stat-num" data-count="30">0</div>
-              <div class="text-slate-500 text-xs font-mono tracking-wider mt-1">MÜŞTƏRİ</div>
+              <div class="text-slate-500 text-xs font-syne tracking-wider mt-1">MÜŞTƏRİ</div>
             </div>
           </div>
         </div>
@@ -136,22 +140,22 @@
               <div class="absolute inset-8 rounded-full flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #0d0d20, #1a1a3e); border: 1px solid rgba(124,58,237,0.3);">
                 <div class="text-center">
                   <div class="text-6xl mb-2"><img src="./src/assets/mayl-shikhverdiyev.png" alt="mail şixverdiyev" class="rounded-full "></div>
-                  <div class="font-mono text-xs text-violet-400">v2.0.26</div>
+                  <div class="font-syne text-xs text-violet-400">v2.0.26</div>
                 </div>
                 <!-- Glow -->
                 <div class="absolute inset-0 rounded-full" style="background: radial-gradient(circle at 50% 30%, rgba(217,70,239,0.15), transparent 60%);"></div>
               </div>
 
               <!-- Floating Tags -->
-              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-violet-300 border-violet-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(0deg) translateY(-184px) rotate(0deg);">HTML5 &amp; CSS3</div>
-              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-indigo-300 border-indigo-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(40deg) translateY(-184px) rotate(-40deg);">TypeScript</div>
-              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-cyan-300 border-cyan-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(80deg) translateY(-184px) rotate(-80deg);">JavaScript &amp; jQuery</div>
-              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-fuchsia-300 border-fuchsia-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(120deg) translateY(-184px) rotate(-120deg);">C# ASP.NET</div>
-              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-emerald-300 border-emerald-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(160deg) translateY(-184px) rotate(-160deg);">Python</div>
-              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-blue-300 border-blue-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(200deg) translateY(-184px) rotate(-200deg);">SQL / Database</div>
-              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-sky-300 border-sky-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(240deg) translateY(-184px) rotate(-240deg);">Server &amp; Cloud</div>
-              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-blue-300 border-blue-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(280deg) translateY(-184px) rotate(-280deg);">Git &amp; GitHub</div>
-              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-mono text-amber-300 border-amber-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(320deg) translateY(-184px) rotate(-320deg);">C / C++</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-syne text-violet-300 border-violet-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(0deg) translateY(-184px) rotate(0deg);">HTML5 &amp; CSS3</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-syne text-indigo-300 border-indigo-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(40deg) translateY(-184px) rotate(-40deg);">TypeScript</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-syne text-cyan-300 border-cyan-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(80deg) translateY(-184px) rotate(-80deg);">JavaScript &amp; jQuery</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-syne text-fuchsia-300 border-fuchsia-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(120deg) translateY(-184px) rotate(-120deg);">C# ASP.NET</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-syne text-emerald-300 border-emerald-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(160deg) translateY(-184px) rotate(-160deg);">Python</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-syne text-blue-300 border-blue-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(200deg) translateY(-184px) rotate(-200deg);">SQL / Database</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-syne text-sky-300 border-sky-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(240deg) translateY(-184px) rotate(-240deg);">Server &amp; Cloud</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-syne text-blue-300 border-blue-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(280deg) translateY(-184px) rotate(-280deg);">Git &amp; GitHub</div>
+              <div class="absolute left-1/2 top-1/2 glass-card px-3 py-2 text-xs font-syne text-amber-300 border-amber-500/30 whitespace-nowrap" style="transform: translate(-50%, -50%) rotate(320deg) translateY(-184px) rotate(-320deg);">C / C++</div>
             </div>
           </div>
         </div>
@@ -174,10 +178,10 @@
               <div class="w-3 h-3 rounded-full bg-red-500/70"></div>
               <div class="w-3 h-3 rounded-full bg-yellow-500/70"></div>
               <div class="w-3 h-3 rounded-full bg-emerald-500/70"></div>
-              <span class="font-mono text-xs text-slate-500 ml-2">developer.cs</span>
+              <span class="font-syne text-xs text-slate-500 ml-2">developer.cs</span>
             </div>
             <!-- Fake Code -->
-            <div class="space-y-1.5 font-mono text-xs leading-relaxed">
+            <div class="space-y-1.5 font-syne text-xs leading-relaxed">
               <div><span class="text-violet-400">public class</span> <span class="text-fuchsia-400">Developer</span></div>
               <div class="pl-4"><span class="text-slate-500">{</span></div>
               <div class="pl-8"><span class="text-blue-400">public string</span> <span class="text-white">Name</span> <span class="text-slate-500">= </span><span class="text-emerald-400">"Mayl Shikhverdiyev"</span>;</div>
@@ -203,20 +207,20 @@
             <div class="glass-card p-4 text-center">
               <div class="card-glow"></div>
               <i class="fa-brands fa-github text-2xl text-slate-400 mb-2"></i>
-              <div class="font-mono text-xs text-slate-500">GitHub</div>
-              <div class="font-mono text-sm text-white mt-0.5">20+ projects</div>
+              <div class="font-syne text-xs text-slate-500">GitHub</div>
+              <div class="font-syne text-sm text-white mt-0.5">20+ projects</div>
             </div>
             <div class="glass-card p-4 text-center">
               <div class="card-glow"></div>
               <i class="fa-solid fa-star text-2xl text-yellow-500/70 mb-2"></i>
-              <div class="font-mono text-xs text-slate-500">Stars</div>
-              <div class="font-mono text-sm text-white mt-0.5">180+</div>
+              <div class="font-syne text-xs text-slate-500">Stars</div>
+              <div class="font-syne text-sm text-white mt-0.5">180+</div>
             </div>
             <div class="glass-card p-4 text-center">
               <div class="card-glow"></div>
               <i class="fa-solid fa-mug-hot text-2xl text-amber-500/70 mb-2"></i>
-              <div class="font-mono text-xs text-slate-500">Qəhvə</div>
-              <div class="font-mono text-sm text-white mt-0.5">∞ fincan</div>
+              <div class="font-syne text-xs text-slate-500">Qəhvə</div>
+              <div class="font-syne text-sm text-white mt-0.5">∞ fincan</div>
             </div>
           </div>
         </div>
@@ -230,7 +234,7 @@
             5+ il ərzində enterprise səviyyəli veb tətbiqlər, REST API-lər və microservice arxitekturaları qurmuşam. C# / ASP.NET MVC ekosistemini dərin bilirəm.
           </p>
           <p class="text-slate-400 leading-relaxed mb-8">
-            Frontend tərəfdə React, TypeScript və vanilla JavaScript istifadə edirəm. Clean code prinsiplerinə, SOLID qaydalarına və DDD yanaşmasına əməl edirəm. Hər layihəni performans, təhlükəsizlik və miqyaslanma nəzərə alınaraq qururum.
+            Frontend tərəfdə React, TypeScript və vanilla JavaScript istifadə edirəm. Clean code prinsiplərinə, SOLID qaydalarına və DDD yanaşmasına əməl edirəm. Hər layihəni performans, təhlükəsizlik və miqyaslanma nəzərə alınaraq qururam.
           </p>
 
           <div class="flex flex-wrap gap-2 mb-8">
@@ -269,35 +273,35 @@
             </div>
             <div>
               <div class="font-bold text-white">Backend</div>
-              <div class="font-mono text-xs text-slate-500">Server-side</div>
+              <div class="font-syne text-xs text-slate-500">Server-side</div>
             </div>
           </div>
           <div class="space-y-4">
             <div>
               <div class="flex justify-between mb-1.5">
-                <span class="font-mono text-xs text-slate-300">C# / ASP.NET MVC</span>
-                <span class="font-mono text-xs text-fuchsia-400">75%</span>
+                <span class="font-syne text-xs text-slate-300">C# / ASP.NET MVC</span>
+                <span class="font-syne text-xs text-fuchsia-400">75%</span>
               </div>
               <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
             </div>
             <div>
               <div class="flex justify-between mb-1.5">
-                <span class="font-mono text-xs text-slate-300">Entity Framework Core</span>
-                <span class="font-mono text-xs text-fuchsia-400">90%</span>
+                <span class="font-syne text-xs text-slate-300">Entity Framework Core</span>
+                <span class="font-syne text-xs text-fuchsia-400">90%</span>
               </div>
               <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
             </div>
             <div>
               <div class="flex justify-between mb-1.5">
-                <span class="font-mono text-xs text-slate-300">Web API / REST</span>
-                <span class="font-mono text-xs text-fuchsia-400">92%</span>
+                <span class="font-syne text-xs text-slate-300">Web API / REST</span>
+                <span class="font-syne text-xs text-fuchsia-400">92%</span>
               </div>
               <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
             </div>
             <div>
               <div class="flex justify-between mb-1.5">
-                <span class="font-mono text-xs text-slate-300">SignalR / gRPC</span>
-                <span class="font-mono text-xs text-fuchsia-400">75%</span>
+                <span class="font-syne text-xs text-slate-300">SignalR / gRPC</span>
+                <span class="font-syne text-xs text-fuchsia-400">75%</span>
               </div>
               <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
             </div>
@@ -313,35 +317,35 @@
             </div>
             <div>
               <div class="font-bold text-white">Frontend</div>
-              <div class="font-mono text-xs text-slate-500">Client-side</div>
+              <div class="font-syne text-xs text-slate-500">Client-side</div>
             </div>
           </div>
           <div class="space-y-4">
             <div>
               <div class="flex justify-between mb-1.5">
-                <span class="font-mono text-xs text-slate-300">HTML / CSS / JS</span>
-                <span class="font-mono text-xs text-blue-400">95%</span>
+                <span class="font-syne text-xs text-slate-300">HTML / CSS / JS</span>
+                <span class="font-syne text-xs text-blue-400">95%</span>
               </div>
               <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
             </div>
             <div>
               <div class="flex justify-between mb-1.5">
-                <span class="font-mono text-xs text-slate-300">React / TypeScript</span>
-                <span class="font-mono text-xs text-blue-400">82%</span>
+                <span class="font-syne text-xs text-slate-300">React / TypeScript</span>
+                <span class="font-syne text-xs text-blue-400">82%</span>
               </div>
               <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
             </div>
             <div>
               <div class="flex justify-between mb-1.5">
-                <span class="font-mono text-xs text-slate-300">Tailwind CSS</span>
-                <span class="font-mono text-xs text-blue-400">90%</span>
+                <span class="font-syne text-xs text-slate-300">Tailwind CSS</span>
+                <span class="font-syne text-xs text-blue-400">90%</span>
               </div>
               <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
             </div>
             <div>
               <div class="flex justify-between mb-1.5">
-                <span class="font-mono text-xs text-slate-300">jQuery / Bootstrap</span>
-                <span class="font-mono text-xs text-blue-400">88%</span>
+                <span class="font-syne text-xs text-slate-300">jQuery / Bootstrap</span>
+                <span class="font-syne text-xs text-blue-400">88%</span>
               </div>
               <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
             </div>
@@ -357,7 +361,7 @@
             </div>
             <div>
               <div class="font-bold text-white">Database & Cloud</div>
-              <div class="font-mono text-xs text-slate-500">Data Layer</div>
+              <div class="font-syne text-xs text-slate-500">Data Layer</div>
             </div>
           </div>
           <div class="flex flex-wrap gap-2">
@@ -381,7 +385,7 @@
             </div>
             <div>
               <div class="font-bold text-white">Tools & Methods</div>
-              <div class="font-mono text-xs text-slate-500">Workflow</div>
+              <div class="font-syne text-xs text-slate-500">Workflow</div>
             </div>
           </div>
           <div class="flex flex-wrap gap-2">
@@ -419,7 +423,7 @@
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="text-center">
                 <i class="fa-solid fa-building text-5xl mb-3" style="background: linear-gradient(135deg, #d946ef, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                <div class="font-mono text-xs text-slate-600">Corporate</div>
+                <div class="font-syne text-xs text-slate-600">Corporate</div>
               </div>
             </div>
             <div class="project-img-overlay rounded-t">
@@ -453,7 +457,7 @@
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="text-center">
                 <i class="fa-solid fa-building text-5xl mb-3" style="background: linear-gradient(135deg, #7c3aed, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                <div class="font-mono text-xs text-slate-600">Corporate</div>
+                <div class="font-syne text-xs text-slate-600">Corporate</div>
               </div>
             </div>
             <div class="project-img-overlay rounded-t">
@@ -485,7 +489,7 @@
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="text-center">
                 <i class="fa-solid fa-sitemap text-5xl mb-3" style="background: linear-gradient(135deg, #d946ef, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                <div class="font-mono text-xs text-slate-600">CRM & HRM and more ...</div>
+                <div class="font-syne text-xs text-slate-600">CRM & HRM and more ...</div>
               </div>
             </div>
             <div class="project-img-overlay rounded-t">
@@ -518,7 +522,7 @@
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="text-center">
                 <i class="fa-solid fa-cart-shopping text-5xl mb-3" style="background: linear-gradient(135deg, #7c3aed, #d946ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                <div class="font-mono text-xs text-slate-600">E-Commerce</div>
+                <div class="font-syne text-xs text-slate-600">E-Commerce</div>
               </div>
             </div>
             <div class="project-img-overlay rounded-t">
@@ -549,7 +553,7 @@
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="text-center">
                 <i class="fa-solid fa-graduation-cap text-5xl mb-3" style="background: linear-gradient(135deg, #3b82f6, #d946ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
-                <div class="font-mono text-xs text-slate-600">EdTech</div>
+                <div class="font-syne text-xs text-slate-600">EdTech</div>
               </div>
             </div>
             <div class="project-img-overlay rounded-t">
@@ -580,7 +584,7 @@
           <div class="w-14 h-14 rounded-full flex items-center justify-center mb-4" style="background: linear-gradient(135deg, rgba(217,70,239,0.1), rgba(124,58,237,0.1)); border: 1px solid rgba(217,70,239,0.2);">
             <i class="fa-brands fa-github text-2xl text-slate-400"></i>
           </div>
-          <p class="text-slate-500 text-sm font-mono mb-4">Daha çox layihəni GitHub-da gör</p>
+          <p class="text-slate-500 text-sm font-syne mb-4">Daha çox layihəni GitHub-da gör</p>
           <a href="https://github.com/shikhverdiyev05/" class="btn-outline text-sm">GitHub Profil</a>
         </div>
 
@@ -610,9 +614,9 @@
             <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
               <div>
                 <h3 class="font-bold text-white text-base">Junior Front-End Developer</h3>
-                <div class="font-mono text-xs text-fuchsia-400 mt-0.5">Ferora LLC</div>
+                <div class="font-syne text-xs text-fuchsia-400 mt-0.5">Ferora LLC</div>
               </div>
-              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2026 — İndi</span>
+              <span class="font-syne text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2026 — İndi</span>
             </div>
             <p class="text-slate-400 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut rerum, minus voluptates eum tempora eius autem neque magnam. Beatae est iusto sit accusamus voluptates sed iste doloribus ut repellat aspernatur!</p>
             <div class="flex flex-wrap gap-2 mt-4">
@@ -636,9 +640,9 @@
             <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
               <div>
                 <h3 class="font-bold text-white text-base">Junior Full-Stack Developer</h3>
-                <div class="font-mono text-xs text-fuchsia-400 mt-0.5">Electroom.Az</div>
+                <div class="font-syne text-xs text-fuchsia-400 mt-0.5">Electroom.Az</div>
               </div>
-              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2026 — İndi</span>
+              <span class="font-syne text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2026 — İndi</span>
             </div>
             <p class="text-slate-400 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut rerum, minus voluptates eum tempora eius autem neque magnam. Beatae est iusto sit accusamus voluptates sed iste doloribus ut repellat aspernatur!</p>
             <div class="flex flex-wrap gap-2 mt-4">
@@ -662,9 +666,9 @@
             <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
               <div>
                 <h3 class="font-bold text-white text-base">CO - Owner</h3>
-                <div class="font-mono text-xs text-blue-400 mt-0.5">DevAzDesign Group — Bakı</div>
+                <div class="font-syne text-xs text-blue-400 mt-0.5">DevAzDesign Group — Bakı</div>
               </div>
-              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2020 — 2023</span>
+              <span class="font-syne text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2020 — 2023</span>
             </div>
             <p class="text-slate-400 text-sm leading-relaxed">Dizayn, proqram təminatı, İT help-desk və sistem inzibatçılığı kimi fərqli istiqamətləri birləşdirən multidissiplinar rəqəmsal həllər agentliyi kimi yaradılmışdır. Biz kiçik və orta miqyaslı müəssisələrin rəqəmsallaşma ehtiyaclarını vahid mərkəzdən qarşılamaq üçün dizayn mərkəzli və infrastruktur yönümlü layihələr icra edirdik. Şirkətin qurucu ortağı kimi, rəqəmsal məhsulların ideyadan icraya qədər olan bütün həyat dövrünü (SDLC) idarə etmiş və biznes hədəflərinə uyğun strateji inkişaf planları hazırlamışam.</p>
             <div class="flex flex-wrap gap-2 mt-4">
@@ -688,9 +692,9 @@
             <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
               <div>
                 <h3 class="font-bold text-white text-base">Junior UX/UI Designer</h3>
-                <div class="font-mono text-xs text-violet-400 mt-0.5">Cal.com - Italy</div>
+                <div class="font-syne text-xs text-violet-400 mt-0.5">Cal.com - Italy</div>
               </div>
-              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2021 — 2022</span>
+              <span class="font-syne text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2021 — 2022</span>
             </div>
             <p class="text-slate-400 text-sm leading-relaxed">Mən 2031-ci ilə qədər bir milyard insanı birləşdirməyi hədəfləyən, qlobal "Open Scheduling" infrastrukturunu quran açıq qaynaqlı (open-source) layihədə remote olaraq platformanın həm infrastruktur baxımından güclü, həm də vizual olaraq minimalist və estetik qalmasını təmin edən genişləndirilə bilən dizayn sistemləri və istifadəçi axınları üzərində işləmişəm.</p>
             <div class="flex flex-wrap gap-2 mt-4">
@@ -711,9 +715,9 @@
             <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
               <div>
                 <h3 class="font-bold text-white text-base">Help Desk</h3>
-                <div class="font-mono text-xs text-violet-400 mt-0.5">Int Mobile - IT Services</div>
+                <div class="font-syne text-xs text-violet-400 mt-0.5">Int Mobile - IT Services</div>
               </div>
-              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2020 — 2025</span>
+              <span class="font-syne text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2020 — 2025</span>
             </div>
             <p class="text-slate-400 text-sm leading-relaxed">Help-desk mütəxəssisi olaraq, müəssisə daxili İT infrastrukturun qurulması və periferiya qurğularının sazlanması ilə yanaşı, lokal şəbəkə xətalarının aradan qaldırılması və təhlükəsizlik kamera sistemlərinin montajı proseslərini uğurla icra etmişəm. Gələn texniki müraciətləri mərkəzləşdirilmiş qaydada qəbul edərək, proqram təminatlarının konfiqurasiyası və sistem nasazlıqlarının operativ həlli vasitəsilə texniki dəstək xidmətinin kəsintisizliyini təmin etmişəm. Həm rəqəmsal, həm də fiziki texniki infrastrukturun idarə olunmasında birbaşa iştirak edərək, mürəkkəb hardware və software problemlərini peşəkar səviyyədə həll etmişəm.</p>
             <div class="flex flex-wrap gap-2 mt-4">
@@ -735,9 +739,9 @@
             <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
               <div>
                 <h3 class="font-bold text-white text-base">Course - Front-End Developer</h3>
-                <div class="font-mono text-xs text-blue-400 mt-0.5">Div Academy</div>
+                <div class="font-syne text-xs text-blue-400 mt-0.5">Div Academy</div>
               </div>
-              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2025 — 2026</span>
+              <span class="font-syne text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2025 — 2026</span>
             </div>
             <p class="text-slate-400 text-sm">Müasir dövrün tələblərinə cavab verən responsiv , profesional saytların yığılması , əsas dizayn prinsipləri , müxtəlif veb animasiyaların hazırlanması , müasir framework-lar və kitabxanalarla işləmə bacarıqları , API -lar ilə praktiki iş təcrübəsi , SaaS və PaaS sistemlərinin hazırlanması ,mürəkkəb və funsional Admin panellərin qurulması</p>
             <div class="flex flex-wrap gap-2 mt-4">
@@ -762,9 +766,9 @@
             <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
               <div>
                 <h3 class="font-bold text-white text-base">Course - Project Manager</h3>
-                <div class="font-mono text-xs text-blue-400 mt-0.5">Secret Academy</div>
+                <div class="font-syne text-xs text-blue-400 mt-0.5">Secret Academy</div>
               </div>
-              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2025</span>
+              <span class="font-syne text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2025</span>
             </div>
             <p class="text-slate-400 text-sm">Layihələrin idarə edilməsi üzrə praktiki işlər, risk ,vaxt və büdcənin idarə edilməsi üsulları , tələblərin toplaması və komandaya ötürülməsi qaydaları  </p>
             <div class="flex flex-wrap gap-2 mt-4">
@@ -788,9 +792,9 @@
             <div class="flex flex-wrap justify-between items-start gap-2 mb-3">
               <div>
                 <h3 class="font-bold text-white text-base">Bakalavr — İnformasiya Texnologiyaları</h3>
-                <div class="font-mono text-xs text-blue-400 mt-0.5">Bakı Mühəndislik Universiteti</div>
+                <div class="font-syne text-xs text-blue-400 mt-0.5">Bakı Mühəndislik Universiteti</div>
               </div>
-              <span class="font-mono text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2023 — indi</span>
+              <span class="font-syne text-xs text-slate-500 bg-white/5 px-3 py-1 rounded-full">2023 — indi</span>
             </div>
             <p class="text-slate-400 text-sm">Mürəkkəb Alqoritmlər, Data Strukturlar, OOP, Database Management ,UX/UI Design , 3D Modelləşdirmə , Business Intelligence </p>
             <div class="flex flex-wrap gap-2 mt-4">
@@ -835,7 +839,7 @@
               <i class="fa-solid fa-envelope text-fuchsia-400"></i>
             </div>
             <div>
-              <div class="font-mono text-xs text-slate-500 mb-0.5">E-mail</div>
+              <div class="font-syne text-xs text-slate-500 mb-0.5">E-mail</div>
               <a href="mailto:anar@dev.az" class="text-white hover:text-fuchsia-400 transition-colors font-medium">maylshikhverdiyev@gmail.com</a>
             </div>
           </div>
@@ -846,7 +850,7 @@
               <i class="fa-brands fa-linkedin text-violet-400"></i>
             </div>
             <div>
-              <div class="font-mono text-xs text-slate-500 mb-0.5">LinkedIn</div>
+              <div class="font-syne text-xs text-slate-500 mb-0.5">LinkedIn</div>
               <a href="www.linkedin.com/in/maylshikhverdiyev" class="text-white hover:text-violet-400 transition-colors font-medium">linkedin.com/in/maylshikhverdiyev</a>
             </div>
           </div>
@@ -857,7 +861,7 @@
               <i class="fa-brands fa-github text-blue-400"></i>
             </div>
             <div>
-              <div class="font-mono text-xs text-slate-500 mb-0.5">GitHub</div>
+              <div class="font-syne text-xs text-slate-500 mb-0.5">GitHub</div>
               <a href="http://github.com/shikhverdiyev05" class="text-white hover:text-blue-400 transition-colors font-medium">github.com/shikhverdiyev05</a>
             </div>
           </div>
@@ -868,7 +872,7 @@
               <i class="fa-brands fa-telegram text-sky-400"></i>
             </div>
             <div>
-              <div class="font-mono text-xs text-slate-500 mb-0.5">Telegram</div>
+              <div class="font-syne text-xs text-slate-500 mb-0.5">Telegram</div>
               <a href="#" class="text-white hover:text-sky-400 transition-colors font-medium">@LezginMS</a>
             </div>
           </div>
@@ -881,20 +885,20 @@
           <div id="contact-form" class="space-y-4">
             <div class="grid grid-cols-2 gap-4">
               <div>
-                <label class="font-mono text-xs text-slate-500 block mb-2 tracking-wider">AD</label>
+                <label class="font-syne text-xs text-slate-500 block mb-2 tracking-wider">AD</label>
                 <input type="text" placeholder="Adınız" class="form-input"/>
               </div>
               <div>
-                <label class="font-mono text-xs text-slate-500 block mb-2 tracking-wider">SOYAD</label>
+                <label class="font-syne text-xs text-slate-500 block mb-2 tracking-wider">SOYAD</label>
                 <input type="text" placeholder="Soyadınız" class="form-input"/>
               </div>
             </div>
             <div>
-              <label class="font-mono text-xs text-slate-500 block mb-2 tracking-wider">E-MAIL</label>
+              <label class="font-syne text-xs text-slate-500 block mb-2 tracking-wider">E-MAIL</label>
               <input type="email" placeholder="email@example.com" class="form-input"/>
             </div>
             <div>
-              <label class="font-mono text-xs text-slate-500 block mb-2 tracking-wider">MÖVZU</label>
+              <label class="font-syne text-xs text-slate-500 block mb-2 tracking-wider">MÖVZU</label>
               <select class="form-input">
                 <option value="">Seçin...</option>
                 <option>Layihə Sifarişi</option>
@@ -904,7 +908,7 @@
               </select>
             </div>
             <div>
-              <label class="font-mono text-xs text-slate-500 block mb-2 tracking-wider">MESAJ</label>
+              <label class="font-syne text-xs text-slate-500 block mb-2 tracking-wider">MESAJ</label>
               <textarea rows="4" placeholder="Mesajınızı yazın..." class="form-input resize-none"></textarea>
             </div>
             <button id="send-btn" class="btn-primary w-full text-center">
@@ -913,7 +917,7 @@
                 Göndər
               </span>
             </button>
-            <div id="form-success" class="hidden font-mono text-xs text-emerald-400 text-center py-2">
+            <div id="form-success" class="hidden font-syne text-xs text-emerald-400 text-center py-2">
               ✓ Mesajınız uğurla göndərildi!
             </div>
           </div>
@@ -930,9 +934,9 @@
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-2">
           <span class="font-syne font-bold text-white text-sm tracking-wider">SHIKHVERDIYEV<span class="gradient-text">.</span>DEV</span>
-          <span class="font-mono text-xs text-slate-600">© 2026</span>
+          <span class="font-syne text-xs text-slate-600">© 2026</span>
         </div>
-        <div class="font-mono text-xs text-slate-600 text-center">
+        <div class="font-syne text-xs text-slate-600 text-center">
           Quruldu: <span class="text-violet-400">ASP.NET MVC</span> + <span class="text-fuchsia-400">Tailwind</span> + <span class="text-blue-400">♥</span>
         </div>
         <div class="flex gap-4">
@@ -944,11 +948,6 @@
       </div>
     </div>
   </footer>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="./js/tailwind.config.js"></script>
-  <script src="./js/main.js"></script>
   
 </body>
 </html>

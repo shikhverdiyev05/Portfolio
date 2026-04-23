@@ -10,8 +10,7 @@ tailwind.config = {
           border: '#1e1e3f',
         },
         fontFamily: {
-          syne: ['Syne', 'sans-serif'],
-          mono: ['Space Mono', 'monospace'],
+          syne: ['Montserrat', 'sans-serif'],
         }
       }
     }
